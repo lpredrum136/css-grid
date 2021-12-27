@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="background-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Grid</title>
+  </head>
+  <body>
+    <div class="grid-container-one">
+      <div class="grid-item">Grid Item 1</div>
+      <div class="grid-item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel
+        tincidunt dui. Nulla dignissim porttitor nisl, tincidunt fringilla justo
+        ultrices quis. Duis cursus aliquam ante, hendrerit rhoncus velit.
+        Maecenas maximus pharetra quam vitae finibus. Suspendisse interdum
+        turpis eros, nec dictum nisl iaculis a.
+      </div>
+      <div class="grid-item">Grid Item 3</div>
+      <div class="grid-item">Grid Item 4</div>
+      <div class="grid-item custom-position-five">
+        Grid Item 5. This item will have a specific position determined by grid
+        lines. Normally, it should be on row 2, col 1. But now it is on row 2
+        but spanning across two cols with grid-column: 1 / 3
+      </div>
+      <div class="grid-item custom-position-six">
+        Grid Item 6. Similarly to Grid Item 5, with grid-column: 3 / 6
+      </div>
+      <div class="grid-item custom-position-seven">
+        Grid Item 7, similar to Grid Item 5 or 6, but now spanning with both
+        grid-column: 1 / 4 and grid-row: 3 / 5
+      </div>
+      <div class="grid-item">Grid Item 8</div>
+      <div class="grid-item">Grid Item 9</div>
+      <div class="grid-item custom-position-ten">
+        Grid Item 10, starting from the middle of the row, with grid-column: 5 /
+        6, pushing Grid Item 11 and 12 down to a new row
+      </div>
+      <div class="grid-item">
+        Grid Item 11, pushed to a new row by Grid Item 10's custom position, but
+        of course can be manually put in the blank space to the left of Grid
+        Item 10, by using grid lines technique as have been used above
+      </div>
+      <div class="grid-item">Grid Item 12</div>
+    </div>
+
+    <div class="grid-container-two">
+      <div class="grid-item">Grid Item 1</div>
+      <div class="grid-item">Grid Item 2</div>
+      <div class="grid-item">Grid Item 3</div>
+      <div class="nested-grid-container">
+        <div class="grid-item">Nested 1</div>
+        <div class="grid-item">Nested 2</div>
+        <div class="grid-item">Nested 3</div>
+        <div class="grid-item">Nested 4</div>
+        <div class="grid-item">Nested 5</div>
+        <div class="grid-item">Nested 6</div>
+      </div>
+      <div class="grid-item">Grid Item 5</div>
+      <div class="grid-item">Grid Item 6</div>
+    </div>
+
+    <div class="grid-container-three">
+      <div class="grid-item one">Grid Item 1</div>
+      <div class="grid-item">Grid Item 2</div>
+      <div class="grid-item">Grid Item 3</div>
+      <div class="grid-item">Grid Item 4</div>
+      <div class="grid-item">Grid Item 5</div>
+      <div class="grid-item">Grid Item 6</div>
+    </div>
+  </body>
+</html>

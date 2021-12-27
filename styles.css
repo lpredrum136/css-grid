@@ -1,0 +1,84 @@
+.grid-container-one {
+  display: grid;
+
+  /* it can also takes values like 33.3% 33.3%, or 200px 100px, etc */
+  /* grid-template-columns: 2fr 1fr 1fr 3fr; */
+
+  grid-template-columns: repeat(5, 1fr);
+
+  /* By default, row height is determined by content height. But this overrides that, basically not caring about content height
+    It's gonna "chop off" the content
+  */
+  /* grid-auto-rows: 200px; */
+
+  /* If there's nothing to dictate the height, then apply minimum of 200px. If there's some content in that height that makes it larger than 200px, then let that content dictate the height */
+  /* grid-auto-rows: minmax(200px, auto); */
+
+  /* 4 rows */
+  /* grid-template-rows: 200px 300px 400px 200px; */
+
+  /* Best way. Also here it will create "placeholder" spaces for 6 rows, even when we don't have enough content to fill yet */
+  grid-template-rows: repeat(6, minmax(200px, auto));
+
+  /* Gap */
+  /* column-gap: 10px;
+  row-gap: 10px; */
+  gap: 10px;
+
+  /* If you have x columns/rows, you have x + 1 column/row lines, starting from 1, and ending at x + 1 */
+}
+
+/* GRID LINES: this div will span horizontally from column line 1 to column line 3 */
+.custom-position-five {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+
+  grid-column: 1 / 3;
+
+  /* another way, given that the starting column, by default, is column 1 */
+  /* grid-column: span 2; */
+}
+
+.custom-position-six {
+  grid-column: 3 / 6;
+}
+
+.custom-position-seven {
+  grid-column: 1 / 4;
+  grid-row: 3 / 5;
+}
+
+.custom-position-ten {
+  grid-column: 5 / 6;
+}
+
+/* NESTED GRID */
+.grid-container-two,
+.grid-container-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.nested-grid-container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ALIGN AND JUSTIFY */
+.grid-container-three {
+  grid-auto-rows: minmax(200px, auto);
+
+  /* Vertically aligning. By default, align-items: stretch; Other values: align-items: end, etc */
+  align-items: start;
+
+  /* Horizontally aligning. By default, justify-items: stretch; Other values: justify-items: end, etc */
+  justify-items: start;
+}
+
+/* Overriding global aligning and justifying for one item only */
+.grid-container-three > .grid-item.one {
+  align-self: center;
+  justify-self: center;
+}
